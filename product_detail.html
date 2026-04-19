@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Clone - Product Detail</title>
+    <link rel="stylesheet" href="amazon.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="nav-belt">
+            <div class="nav-logo nav-item-border">
+                <a href="project.html">
+                    <img src="https://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="Amazon Logo">
+                </a>
+            </div>
+
+            <div class="nav-location nav-item-border">
+                <span class="nav-line-1">Deliver to User</span>
+                <span class="nav-line-2"><i class="fas fa-map-marker-alt"></i> New York 10001</span>
+            </div>
+
+            <div class="nav-search">
+                <select class="search-select">
+                    <option>All</option>
+                    <option>Electronics</option>
+                </select>
+                <input type="text" class="search-input" placeholder="Search Amazon">
+                <button class="search-btn">
+                    <i class="fas fa-search" style="font-size: 18px; color: #131921;"></i>
+                </button>
+            </div>
+
+            <div class="nav-location nav-item-border">
+                <span class="nav-line-1">Hello, sign in</span>
+                <span class="nav-line-2">Account & Lists <i class="fas fa-caret-down"></i></span>
+            </div>
+
+            <div class="nav-location nav-item-border">
+                <span class="nav-line-1">Returns</span>
+                <span class="nav-line-2">& Orders</span>
+            </div>
+
+            <div class="nav-cart-box nav-item-border">
+                <a href="cart.html" style="display: flex; text-decoration: none; color: white;">
+                    <i class="fas fa-shopping-cart cart-icon"></i>
+                    <span class="cart-count">0</span>
+                    <span class="cart-text nav-line-2">Cart</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="nav-main">
+            <div class="nav-link"><i class="fas fa-bars"></i> All</div>
+            <div class="nav-link">Today's Deals</div>
+            <div class="nav-link">Customer Service</div>
+            <div class="nav-link">Registry</div>
+            <div class="nav-link">Gift Cards</div>
+            <div class="nav-link">Sell</div>
+        </div>
+    </header>
+
+    <!-- Product Detail Content -->
+    <div class="pdp-wrapper">
+
+        <!-- Left: Images -->
+        <div class="pdp-left">
+            <img class="pdp-img-main"
+                src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1000&q=80"
+                alt="Product Image">
+        </div>
+
+        <!-- Center: Details -->
+        <div class="pdp-middle">
+            <h1 class="pdp-title">Premium Wireless Gaming Headset with Surround Sound, Noise Cancelling Microphone, RGB
+                Lighting, Compatible with PC, PS5, Xbox Series X</h1>
+            <div style="font-size: 14px; margin-bottom: 10px;">
+                <i class="fas fa-star" style="color: #FFA41C;"></i>
+                <i class="fas fa-star" style="color: #FFA41C;"></i>
+                <i class="fas fa-star" style="color: #FFA41C;"></i>
+                <i class="fas fa-star" style="color: #FFA41C;"></i>
+                <i class="fas fa-star-half-alt" style="color: #FFA41C;"></i>
+                <span style="color: #007185; margin-left: 5px;">14,205 ratings</span>
+            </div>
+            <hr style="border: 0; border-top: 1px solid #e7e7e7; margin: 10px 0;">
+
+            <div class="pdp-price-block">
+                <span class="price-symbol">$</span>
+                <span class="price-whole">89</span>
+                <span class="price-fraction">99</span>
+            </div>
+
+            <div class="pdp-info-text">
+                <p><b>Brand:</b> TechGear</p>
+                <p><b>Color:</b> Black/Red</p>
+                <p><b>Connectivity:</b> Wireless 2.4GHz</p>
+            </div>
+
+            <ul class="pdp-bullets">
+                <li>Immersive 7.1 Surround Sound for competitive gaming advantage.</li>
+                <li>Hyper-fast wireless connection with up to 30 hour battery life.</li>
+                <li>Detachable noise-cancelling microphone with Blue Voice technology.</li>
+                <li>Memory foam ear pads for long-lasting comfort.</li>
+            </ul>
+        </div>
+
+        <!-- Right: Buy Box -->
+        <div class="pdp-right">
+            <div class="buy-box">
+                <div class="pdp-price-block" style="margin-top: 0;">
+                    <span class="price-symbol">$</span>
+                    <span class="price-whole">89</span>
+                    <span class="price-fraction">99</span>
+                </div>
+                <div style="font-size: 14px; color: #007185; margin-bottom: 10px;">FREE Returns</div>
+                <div style="font-size: 14px; margin-bottom: 10px;">FREE delivery <b style="color: #0F1111;">Tuesday, Jan
+                        16</b></div>
+                <div style="font-size: 18px; color: #007600; margin-bottom: 15px;">In Stock</div>
+
+                <select
+                    style="width: 100%; padding: 5px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #D5D9D9; background: #f0f2f2; box-shadow: 0 2px 5px rgba(15,17,17,.15) inset;">
+                    <option>Qty: 1</option>
+                    <option>Qty: 2</option>
+                </select>
+
+                <button class="button-primary btn-yellow">Add to Cart</button>
+                <button class="button-primary btn-orange">Buy Now</button>
+
+                <div style="margin-top: 15px; font-size: 12px; color: #565959;">
+                    <div style="display: flex; margin-bottom: 5px;"><span style="width: 70px;">Ships from</span>
+                        <span>Amazon</span></div>
+                    <div style="display: flex;"><span style="width: 70px;">Sold by</span> <span>TechGear Store</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="back-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+            Back to top
+        </div>
+
+        <div class="footer-main">
+            <div class="footer-col">
+                <h4>Get to Know Us</h4>
+                <ul>
+                    <li>Careers</li>
+                    <li>Blog</li>
+                    <li>About Amazon</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Make Money with Us</h4>
+                <ul>
+                    <li>Sell products on Amazon</li>
+                    <li>Sell on Amazon Business</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Amazon Payment Products</h4>
+                <ul>
+                    <li>Amazon Business Card</li>
+                    <li>Shop with Points</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Let Us Help You</h4>
+                <ul>
+                    <li>Your Account</li>
+                    <li>Your Orders</li>
+                    <li>Help</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-logo-row">
+            <img src="https://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="Amazon" style="height: 30px;">
+        </div>
+    </footer>
+
+</body>
+
+</html>

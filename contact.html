@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | NeonEvents</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">Neon<span>Events</span></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#events">Events</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <a href="login.html" class="btn login">Log In</a>
+            <a href="register.html" class="btn register">Sign Up</a>
+        </div>
+    </header>
+
+    <div class="auth-container">
+        <form class="glass-form" onsubmit="handleContact(event)">
+            <h2>Get in Touch</h2>
+            <p style="margin-bottom: 20px; color: #aaa;">Have questions about an event? Message us.</p>
+
+            <div class="input-group">
+                <input type="text" name="name" required>
+                <label>Your Name</label>
+            </div>
+
+            <div class="input-group">
+                <input type="email" name="email" required>
+                <label>Your Email</label>
+            </div>
+
+            <div class="input-group">
+                <textarea name="message" rows="4" required
+                    style="width: 100%; background: transparent; border: none; border-bottom: 2px solid rgba(255,255,255,0.2); color: #fff; font-size: 1rem; outline: none; padding-top: 15px; resize: none;"></textarea>
+                <label style="top: -5px; font-size: 0.8rem; color: var(--secondary-color);">Message</label>
+            </div>
+
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
