@@ -1,0 +1,86 @@
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Body */
+body {
+  background: #f4f7fb;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  color: #2c3e50;
+}
+
+header p {
+  color: #555;
+}
+
+/* Subject Card */
+.subject-card {
+  background: white;
+  margin: 15px auto;
+  padding: 15px;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Hide checkbox */
+.subject-card input {
+  display: none;
+}
+
+/* Label styling */
+.subject-card label {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px;
+  background: #3498db;
+  color: white;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.subject-card label:hover {
+  background: #2980b9;
+}
+
+/* Unit box (hidden by default) */
+.unit-box {
+  margin-top: 10px;
+  display: none;
+  flex-direction: column;
+}
+
+/* Show when checked */
+.subject-card input:checked ~ .unit-box {
+  display: flex;
+}
+
+/* Links */
+.unit-box a {
+  text-decoration: none;
+  color: #2c3e50;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  transition: 0.2s;
+}
+
+.unit-box a:hover {
+  color: #3498db;
+  padding-left: 10px;
+}

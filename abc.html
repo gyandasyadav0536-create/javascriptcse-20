@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Study Material Portal</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <h1>📚 Study Material Portal</h1>
+  <p>One Stop Solution For You Buddies</p>
+</header>
+
+<section class="semester">
+
+  <!-- Physics Class 11 -->
+  <div class="subject-card">
+    <input type="checkbox" id="phy11">
+    <label for="phy11">Class 11 Physics</label>
+
+    <div class="unit-box">
+      <a href="#">Part 1</a>
+      <a href="#">Part 2</a>
+    </div>
+  </div>
+
+  <!-- Physics Class 12 -->
+  <div class="subject-card">
+    <input type="checkbox" id="phy12">
+    <label for="phy12">Class 12 Physics</label>
+
+    <div class="unit-box">
+      <a href="#">Formula Sheet</a>
+      <a href="#">Electric Charges</a>
+    </div>
+  </div>
+
+  <!-- Chemistry -->
+  <div class="subject-card">
+    <input type="checkbox" id="chem">
+    <label for="chem">Chemistry</label>
+
+    <div class="unit-box">
+      <a href="#">Physical Chem</a>
+      <a href="#">Organic Chem</a>
+    </div>
+  </div>
+
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const allCheckboxes = document.querySelectorAll(".subject-card input");
+
+  allCheckboxes.forEach((checkbox) => {
+    checkbox.addEventListener("change", function () {
+      if (this.checked) {
+        allCheckboxes.forEach((cb) => {
+          if (cb !== this) cb.checked = false;
+        });
+      }
+    });
+  });
+});
+</script>
+
+</body>
+</html>
