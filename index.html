@@ -1,18 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <script>
-        document.write("<pre> hello world\n welcome to my web page");
+    <title>Library Management System</title>
 
-    //     prompt("What is your name?");
-    //    confirm("Do you want to continue?");
-    //    alert("welcome to my web page");
-   // console.log("Hello World");
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .form {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        input {
+            flex: 1;
+            padding: 10px;
+        }
+
+        button {
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #ccc;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .available {
+            color: green;
+            font-weight: bold;
+        }
+
+        .issued {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Library Management System</h1>
+
+        <div class="form">
+            <input type="text" id="bookName" placeholder="Book Name">
+            <input type="text" id="authorName" placeholder="Author Name">
+            <button onclick="addBook()">Add Book</button>
+        </div>
+
+        <h2>Book List</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Book Name</th>
+                    <th>Author</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="bookTable"></tbody>
+        </table>
+    </div>
+
+    <script>
+        let books = [];
+        let bookId = 1;
+
+        function addBook() {
+            const bookName = document.getElementById("bookName").value;
+            const authorName = document.getElementById("authorName").value;
+
+            if (!bookName || !authorName) {
+                alert("Please fill all fields");
+                return;
+            }
+
+            books.push({
+                id: bookId++,
+                name: bookName,
+                author: authorName,
+                status: "Available"
+            });
+
+            document.getElementById("bookName").value = "";
+            document.getElementById("authorName").value = "";
+
+            displayBooks();
+        }
+
+        function displayBooks() {
+            const table = document.getElementById("bookTable");
+            table.innerHTML = "";
+
+            books.forEach(book => {
+                table.innerHTML += `
+        <tr>
+            <td>${book.id}</td>
+            <td>${book.name}</td>
+            <td>${book.author}</td>
+            <td class="${book.status === 'Available' ? 'available' : 'issued'}">
+                ${book.status}
+            </td>
+            <td>
+                ${book.status === "Available"
+                        ? `<button onclick="issueBook(${book.id})">Issue</button>`
+                        : `<button onclick="returnBook(${book.id})">Return</button>`
+                    }
+                <button onclick="deleteBook(${book.id})">Delete</button>
+            </td>
+        </tr>`;
+            });
+        }
+
+        function issueBook(id) {
+            const book = books.find(b => b.id === id);
+            if (book) {
+                book.status = "Issued";
+                displayBooks();
+            }
+        }
+
+        function returnBook(id) {
+            const book = books.find(b => b.id === id);
+            if (book) {
+                book.status = "Available";
+                displayBooks();
+            }
+        }
+
+        function deleteBook(id) {
+            books = books.filter(book => book.id !== id);
+            displayBooks();
+        }
     </script>
+
 </body>
+
 </html>

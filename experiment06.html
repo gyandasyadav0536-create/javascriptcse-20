@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dynamic Content Changer</title>
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div class="container">
+<h2 id="mainHeading">Welcome to JavaScript Lab</h2>
+<input type="text" id="userInput" placeholder="Enter new heading text">
+<br><br>
+<button id="changeTextBtn">Change Heading</button>
+
+<button id="bgColorBtn">Change Background</button>
+<button id="fontSizeBtn">Increase Font Size</button>
+<button id="toggleBtn">Show/Hide Paragraph</button>
+<button id="resetBtn">Reset</button>
+<p id="paragraph">
+This is a sample paragraph. JavaScript events can dynamically change content.
+</p>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
+Index1.css
+
+body {
+font-family: Arial;
+background-color: #f4f4f4;
+text-align: center;
+}
+.container {
+width: 600px;
+margin: 50px auto;
+padding: 20px;
+background: white;
+border-radius: 10px;
+box-shadow: 0 0 10px gray;
+}
+
+button {
+padding: 8px 12px;
+margin: 5px;
+background-color: #007bff;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+button:hover {
+background-color: #0056b3;
+}
+input {
+padding: 8px;
+width: 250px;
+}
