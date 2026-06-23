@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BGMI Lobby</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background: url("https://images.alphacoders.com/121/1215994.jpg") no-repeat center center/cover;
+            color: white;
+        }
+
+        /* Top Bar */
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .player-info {
+            font-size: 18px;
+        }
+
+        .currency {
+            font-size: 18px;
+        }
+
+        /* Left Menu */
+        .left-menu {
+            position: absolute;
+            top: 100px;
+            left: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .menu-btn {
+            padding: 10px 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border: 1px solid #ff9900;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .menu-btn:hover {
+            background: #ff9900;
+        }
+
+        /* Character Section */
+        .character {
+            position: absolute;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+
+        .character img {
+            height: 300px;
+        }
+
+        /* Start Button */
+        .start-btn {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 15px 50px;
+            font-size: 22px;
+            font-weight: bold;
+            background: #ff9900;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .start-btn:hover {
+            background: #ff7700;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="top-bar">
+        <div class="player-info">Player: Warrior123 | Level 45</div>
+        <div class="currency">UC: 1200</div>
+    </div>
+
+    <div class="left-menu">
+        <button class="menu-btn">Inventory</button>
+        <button class="menu-btn">Workshop</button>
+        <button class="menu-btn">Missions</button>
+        <button class="menu-btn">Clan</button>
+    </div>
+
+    <div class="character">
+        <img src="https://i.imgur.com/4AiXzf8.png" alt="Character">
+        <h2>Classic Mode - Erangel</h2>
+    </div>
+
+    <button class="start-btn">START</button>
+
+</body>
+
+</html>

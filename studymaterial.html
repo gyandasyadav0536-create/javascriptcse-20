@@ -1,0 +1,97 @@
+<!--study material -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Study Material Portal</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="style.css"> <!-- Assuming you have a CSS file named style.css for styling -->
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const allCheckboxes = document.querySelectorAll(".subject-card input");
+
+   allCheckboxes.forEach((checkbox) => {
+    checkbox.addEventListener("change", function () {
+
+      if (this.checked) {
+        // Close all others
+        allCheckboxes.forEach((cb) => {
+          if (cb !== this) cb.checked = false;
+        });
+      }
+
+    });
+  });
+});
+</script>
+</head>
+<body>
+
+<header>
+  <h1>📚 Study Material Portal</h1>
+  <p>One Stop Solution For You Buddies</p>
+</header>
+<!-- ===== SEMESTER RADIO ===== -->
+<input type="radio" name="semester" id="sem1">
+<input type="radio" name="semester" id="sem2">
+
+<!-- ===== TOP RIGHT GROUP SWITCH ===== -->
+<div class="semester-switch">
+ <label for="sem1">📘 physics</label>
+<label for="sem2">📗 chemistry</label>
+</div>
+
+
+
+
+<!-- ================= physics group================= -->
+<section class="semester sem1">
+
+  <div class="subject-card">
+  <input type="checkbox" id="sem1-sub1">
+
+<label for="sem1-sub1">class-11th syllabus</label>
+
+  <div class="unit-box">
+    <a href="https://drive.google.com/file/d/1jCHOjMiX3_ImPtFUiphrIGH6q_Zxw77x/view?usp=drive_link" target="_blank">class 11th physics part-01</a>
+    <a href="https://drive.google.com/file/d/1dUeoadtnIWZZQVRayWPx4Cl9Kn09XfTv/view?usp=drive_link" target="_blank">class 11th physics part-02</a>
+      <a href="https://drive.google.com/file/d/1OEWySf7gOJgS4rx9byeHDOgpSEAnVEgo/view?usp=drive_link"target="_blank">pysical world & measurment</a>
+    </div>
+</div>
+<div class="subject-card">
+  <input type="checkbox" id="sem1-sub2">
+  <label for="sem1-sub2">class-12th syllabus</label>
+  
+  
+<div  class="unit-box">
+    <a href="https://drive.google.com/file/d/10U8QXATVjVzN6gMqDcz4VwUW7fmdPRGC/view?usp=drive_link" target="_blank"> physics formula sheet</a>
+    <a href="https://drive.google.com/file/d/12YkQ9oD9q8oWC3oEDGtJkntPOi7zmcph/view?usp=drive_link" target="_blank">class 12th electric charges and field</a>
+    <a href=" https://drive.google.com/file/d/1sbrTRdc9OWKzNkOkt-CKyOlnxcmrflVK/view?usp=drive_link" target="_blank">class 12th  magnetism</a>
+    <a href="https://drive.google.com/file/d/1R-lu_2Sti7a-5g7UHxu_7JeqT_PHsQeh/view?usp=drive_link" target="_blank">class 12th  modern physics</a> 
+    <a  href="https://drive.google.com/file/d/181KDEbpBLjetSqFkveGvq4bMBGI6v6bZ/view?usp=drive_link" target="_blank">Dual Nature of Matter and Radiation questions</a> 
+  </div>
+  
+</div>
+</section>
+
+<section class="semester sem2">
+<div class="subject-card">
+  <input type="checkbox" id="sem2-sub1">
+
+<label for="sem2-sub1">chemistry syllabus</label>
+
+  <div class="unit-box">
+
+    <a href="https://drive.google.com/file/d/1PiFtD97D6QNQa3bzKjKyF1JjqFnzRL6b/view?usp=drive_link" target="_blank">physical chemistry part 1</a>
+    <a href="https://drive.google.com/file/d/1EvAiqxg4Nlqk3HBYEEFXg-nDBS53xvC4/view?usp=drive_link" target="_blank">physical chemistry part 2</a>
+    <a href="https://drive.google.com/file/d/1lKydenOK-p10lFyGjn4E7SCZmpO1fHPW/view?usp=drive_link" target="_blank"> completeorganic chemistry </a>
+    <a href="https://drive.google.com/file/d/1F2F4yxPmcVkR23ehX-NHYO5eZt4BRzq8/view?usp=drive_link"target="_blank">organic chemistry all reactions handbook</a>
+    <a href=" https://drive.google.com/file/d/1GoneGL1va53KXd21cflvld8zEonPZg6_/view?usp=drive_link" target="_blank">organic all reaction mind map</a>
+
+  </div>
+</div>
+</section>
+</body>
+</html>
