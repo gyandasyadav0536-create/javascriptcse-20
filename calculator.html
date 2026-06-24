@@ -1,0 +1,179 @@
+!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Result Calculator</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        .container {
+            width: 400px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        input {
+            width: 90%;
+            padding: 8px;
+            margin: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn1 {
+            background-color: green;
+            color: white;
+        }
+
+        .btn2 {
+            background-color: red;
+            color: white;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        progress {
+            width: 90%;
+            height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>Student Result Calculator</h2>
+
+        <input type="text" id="name" placeholder="Enter Student Name"><br>
+
+        <input type="number" id="s1" placeholder="Subject 1 Marks"><br>
+
+        <input type="number" id="s2" placeholder="Subject 2 Marks"><br>
+
+        <input type="number" id="s3" placeholder="Subject 3 Marks"><br>
+
+        <input type="number" id="s4" placeholder="Subject 4 Marks"><br>
+
+        <input type="number" id="s5" placeholder="Subject 5 Marks"><br>
+
+        <button class="btn1" onclick="calculate()">Calculate</button>
+
+        <button class="btn2" onclick="resetData()">Reset</button>
+
+        <br><br>
+
+        <progress id="bar" value="0" max="100"></progress>
+
+        <div id="result"></div>
+
+    </div>
+
+    <script>
+
+        function calculate() {
+            let name = document.getElementById("name").value;
+
+            let s1 = Number(document.getElementById("s1").value);
+            let s2 = Number(document.getElementById("s2").value);
+            let s3 = Number(document.getElementById("s3").value);
+            let s4 = Number(document.getElementById("s4").value);
+            let s5 = Number(document.getElementById("s5").value);
+
+            if (name == "") {
+                alert("Please Enter Student Name");
+                return;
+            }
+
+            if (s1 > 100 || s2 > 100 || s3 > 100 || s4 > 100 || s5 > 100) {
+                alert("Marks cannot be greater than 100");
+                return;
+            }
+
+            let total = s1 + s2 + s3 + s4 + s5;
+
+            let percentage = (total / 500) * 100;
+
+            let cgpa = percentage / 9.5;
+
+            let average = total / 5;
+
+            let highest = Math.max(s1, s2, s3, s4, s5);
+
+            let lowest = Math.min(s1, s2, s3, s4, s5);
+
+            let status;
+
+            if (s1 >= 33 && s2 >= 33 && s3 >= 33 && s4 >= 33 && s5 >= 33) {
+                status = "PASS";
+                alert("Congratulations! You Passed");
+            }
+            else {
+                status = "FAIL";
+                alert("Sorry! You Failed");
+            }
+
+            let grade;
+
+            if (percentage >= 90)
+                grade = "A+";
+            else if (percentage >= 80)
+                grade = "A";
+            else if (percentage >= 70)
+                grade = "B";
+            else if (percentage >= 60)
+                grade = "C";
+            else if (percentage >= 50)
+                grade = "D";
+            else
+                grade = "F";
+
+            document.getElementById("bar").value = percentage;
+
+            let today = new Date();
+
+            document.getElementById("result").innerHTML =
+                "<h3>Result Card</h3>" +
+                "Name : " + name + "<br><br>" +
+                "Total Marks : " + total + "/500<br>" +
+                "Percentage : " + percentage.toFixed(2) + "%<br>" +
+                "CGPA : " + cgpa.toFixed(2) + "<br>" +
+                "Grade : " + grade + "<br>" +
+                "Average : " + average.toFixed(2) + "<br>" +
+                "Highest Marks : " + highest + "<br>" +
+                "Lowest Marks : " + lowest + "<br>" +
+                "Result : " + status + "<br>" +
+                "Date : " + today.toLocaleString();
+
+            if (status == "PASS")
+                document.getElementById("result").style.color = "green";
+            else
+                document.getElementById("result").style.color = "red";
+        }
+
+        function resetData() {
+            location.reload();
+        }
+
+    </script>
+
+</body>
+
+</html>
